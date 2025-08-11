@@ -5,7 +5,7 @@ title: 欢迎页
 icon: fluent-emoji:house
 welcome: 👋 ciallo~, 一份爱意, 来自：
 name: 河海大学不完全入学指北编辑部
-avatar: /.vuepress/public/normal_latest2.png
+avatar: /normal_latest2.png
 
 titles:
   - 做最真诚的新生指南, 服务每一个HHU的新生.
