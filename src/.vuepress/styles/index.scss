@@ -1,1 +1,583 @@
 // place your custom styles here
+
+// 为正文内容添加背景样式
+.theme-container {
+  // 浅色模式背景 - 更暗淡的配色
+  --content-bg: rgba(236, 240, 245, 0.8);
+  --content-border: rgba(216, 222, 230, 0.85);
+  --page-bg: #eaecf0;
+  --subtle-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.03'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+// 黑夜模式适配 - 保持不变
+html.dark .theme-container {
+  --content-bg: rgba(30, 32, 36, 0.7);
+  --content-border: rgba(50, 52, 60, 0.8);
+  --page-bg: #1a1a1a;
+  --subtle-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+// 设置整体页面背景色
+html:not(.dark) {
+  // 渐变背景，减少“大白”的单调
+  background: linear-gradient(180deg, #f3f6fc 0%, #eef2f9 35%, #eef2f9 100%);
+
+  .navbar,
+  .sidebar {
+    background-color: rgba(236, 240, 245, 0.9);
+  }
+}
+
+// 应用背景效果到主内容区域
+.theme-hope-content {
+  background-color: var(--content-bg);
+  background-image: var(--subtle-pattern);
+  border: 1px solid var(--content-border);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  position: relative;
+  margin: 0.5rem 0;
+  transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+// 调整嵌套内容的间距和样式
+.theme-hope-content {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.3rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    border-bottom: 1px solid var(--content-border);
+    padding-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    border-bottom: 1px dashed var(--content-border);
+  }
+
+  p {
+    line-height: 1.7;
+    margin: 0.8rem 0;
+  }
+
+  a {
+    text-decoration: none;
+    position: relative;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  code {
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+  }
+
+  pre {
+    margin: 1rem 0;
+    border-radius: 6px;
+  }
+
+  img {
+    border-radius: 4px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+  }
+
+  blockquote {
+    border-left-width: 4px;
+    padding: 0.8rem 1rem;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-radius: 0 4px 4px 0;
+    margin: 1rem 0;
+  }
+
+  table {
+    width: 100%;
+    overflow-x: auto;
+    border-collapse: collapse;
+    margin: 1rem 0;
+
+    th,
+    td {
+      padding: 0.6rem 1rem;
+      border: 1px solid var(--content-border);
+    }
+
+    thead {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+  }
+}
+
+// 改进页面顶部标题区域视觉效果
+.page-title {
+  position: relative;
+  margin-bottom: 1.5rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 4rem;
+    height: 2px;
+    background-color: var(--theme-color);
+    border-radius: 1px;
+  }
+}
+
+// 优化导航链接样式
+.vp-breadcrumb {
+  padding: 0.5rem 0;
+
+  a {
+    position: relative;
+
+    &:hover::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: currentColor;
+    }
+  }
+}
+
+// 使侧边栏视觉上更加清晰
+.sidebar {
+  ul {
+    padding-left: 1rem;
+  }
+
+  a.sidebar-link {
+    border-radius: 4px;
+
+    &.active {
+      font-weight: 500;
+    }
+  }
+}
+
+// 美化"上一页"和"下一页"按钮，让它们更明显
+.page-nav {
+  .prev,
+  .next {
+    border: 2px solid var(--theme-color);
+    background-color: rgba(9, 109, 217, 0.05);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: var(--theme-color);
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .hint {
+      display: inline-block;
+      margin: 0 0.3rem;
+    }
+  }
+
+  .prev {
+    padding-left: 1.2rem;
+    margin-right: 0.5rem;
+  }
+
+  .next {
+    padding-right: 1.2rem;
+    margin-left: 0.5rem;
+  }
+}
+
+// 深色模式下的导航按钮
+html.dark .page-nav {
+  .prev,
+  .next {
+    border-color: #1890ff;
+    background-color: rgba(24, 144, 255, 0.1);
+
+    &:hover {
+      background-color: #1890ff;
+      color: #fff;
+    }
+  }
+}
+
+// 首页美化
+.home.project {
+  .hero-info {
+    position: relative;
+    z-index: 10;
+    background: linear-gradient(
+      to bottom,
+      rgba(236, 240, 245, 0.9),
+      rgba(229, 233, 240, 0.7)
+    );
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    margin: 2rem auto;
+    max-width: 800px;
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(45deg, #096dd9, #1890ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .description {
+      margin: 1.5rem 0;
+      font-size: 1.2rem;
+    }
+
+    .actions {
+      margin-top: 2rem;
+
+      a {
+        margin: 0.5rem;
+        padding: 0.8rem 1.6rem;
+        border-radius: 8px;
+        font-weight: 500;
+        transition: all 0.3s;
+
+        &.primary {
+          background: linear-gradient(45deg, #096dd9, #1890ff);
+          border: none;
+          color: #fff;
+          box-shadow: 0 4px 12px rgba(9, 109, 217, 0.3);
+
+          &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(9, 109, 217, 0.4);
+          }
+        }
+
+        &.secondary {
+          background: rgba(236, 240, 245, 0.9);
+          border: 1px solid #096dd9;
+          color: #096dd9;
+
+          &:hover {
+            background: rgba(9, 109, 217, 0.1);
+            transform: translateY(-2px);
+          }
+        }
+      }
+    }
+  }
+}
+
+// 黑暗模式下首页样式 - 保持不变
+html.dark .home.project {
+  .hero-info {
+    background: linear-gradient(
+      to bottom,
+      rgba(30, 32, 36, 0.9),
+      rgba(30, 32, 36, 0.7)
+    );
+
+    h1 {
+      background: linear-gradient(45deg, #1890ff, #69c0ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .actions {
+      a {
+        &.primary {
+          background: linear-gradient(45deg, #1890ff, #69c0ff);
+        }
+
+        &.secondary {
+          background: rgba(30, 32, 36, 0.8);
+          border: 1px solid #1890ff;
+          color: #1890ff;
+
+          &:hover {
+            background: rgba(24, 144, 255, 0.2);
+          }
+        }
+      }
+    }
+  }
+}
+
+body {
+  font-size: 18px !important;
+  user-select: none !important;
+}
+
+pre,
+code {
+  user-select: text !important;
+}
+
+// --- Light mode readability enhancements (overrides) ---
+.theme-container {
+  --content-bg: #ffffff;
+  --content-border: rgba(17, 24, 39, 0.06);
+  --page-bg: #f6f8fb;
+}
+
+html:not(.dark) {
+  .navbar,
+  .sidebar {
+    background-color: rgba(248, 250, 255, 0.85);
+    backdrop-filter: saturate(120%) blur(6px);
+    border-bottom: 1px solid rgba(17, 24, 39, 0.06);
+  }
+}
+
+.theme-hope-content {
+  background-image: none;
+  border: 1px solid var(--content-border);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(17, 24, 39, 0.05);
+  margin: 0.75rem 0;
+  transition: background-color 0.2s ease, border-color 0.2s ease,
+    box-shadow 0.2s ease;
+
+  a {
+    color: #0b66c3;
+  }
+
+  code {
+    background: #eff4ff;
+    color: #0f172a;
+    padding: 0.18rem 0.38rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 5px;
+  }
+}
+
+.sidebar {
+  a.sidebar-link {
+    border-radius: 6px;
+    &:hover {
+      background: rgba(15, 23, 42, 0.04);
+    }
+    &.active {
+      font-weight: 600;
+      background: rgba(15, 23, 42, 0.06);
+    }
+  }
+}
+
+.page-nav {
+  .prev,
+  .next {
+    border: 2px solid var(--theme-color);
+    background-color: rgba(9, 109, 217, 0.05);
+    border-radius: 10px;
+    padding: 0.6rem 1.05rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: var(--theme-color);
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(9, 109, 217, 0.25);
+    }
+  }
+}
+
+.home.project {
+  .hero-info {
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.9),
+      rgba(246, 248, 251, 0.75)
+    );
+    border-radius: 14px;
+    box-shadow: 0 10px 28px rgba(17, 24, 39, 0.12);
+    backdrop-filter: blur(8px) saturate(120%);
+    max-width: 880px;
+
+    h1 {
+      font-size: 2.6rem;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    .description {
+      font-size: 1.18rem;
+      color: #334155;
+    }
+
+    .actions {
+      a {
+        padding: 0.85rem 1.65rem;
+        border-radius: 10px;
+        font-weight: 600;
+
+        &.primary {
+          box-shadow: 0 6px 14px rgba(9, 109, 217, 0.28);
+          &:hover {
+            box-shadow: 0 10px 20px rgba(9, 109, 217, 0.35);
+          }
+        }
+
+        &.secondary {
+          background: #ffffff;
+          border: 1px solid #096dd9;
+          color: #096dd9;
+          &:hover {
+            background: rgba(9, 109, 217, 0.06);
+          }
+        }
+      }
+    }
+  }
+}
+
+body {
+  user-select: text !important;
+}
+
+/* 不同栏目分色：通过 body class 控制主色弱化背景/边框色 */
+body.sec-start {
+  --section-accent: 9, 109, 217; /* 蓝 */
+}
+body.sec-guide {
+  --section-accent: 14, 165, 233; /* 青蓝 */
+}
+body.sec-life {
+  --section-accent: 16, 185, 129; /* 绿 */
+}
+body.sec-facility {
+  --section-accent: 99, 102, 241; /* 靛蓝 */
+}
+body.sec-food {
+  --section-accent: 234, 179, 8; /* 黄 */
+}
+body.sec-study {
+  --section-accent: 37, 99, 235; /* 蓝偏深 */
+}
+
+/* 使用栏目主色在内容区做轻量分色 */
+body[class^="sec-"] .theme-hope-content {
+  border-color: rgba(var(--section-accent), 0.2);
+}
+body[class^="sec-"] .vp-breadcrumb,
+body[class^="sec-"] table thead,
+body[class^="sec-"] blockquote {
+  background-color: rgba(var(--section-accent), 0.06);
+}
+body[class^="sec-"] .page-nav .prev,
+body[class^="sec-"] .page-nav .next {
+  background-color: rgba(var(--section-accent), 0.05);
+  border-color: rgba(var(--section-accent), 0.45);
+}
+
+/* --- Additional color separation for light mode --- */
+html:not(.dark) {
+  /* 面包屑容器加轻微底色，凸显路径 */
+  .vp-breadcrumb {
+    background: rgba(9, 109, 217, 0.04);
+    border: 1px solid rgba(17, 24, 39, 0.06);
+    border-radius: 8px;
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  /* 侧边栏分组 summary 分色，增强区块感 */
+  .sidebar summary {
+    background: rgba(9, 109, 217, 0.06);
+    border-radius: 8px;
+    padding: 0.35rem 0.5rem;
+  }
+}
+
+/* 标题区分：为不同层级设置不同浅色条/底 */
+.theme-hope-content {
+  h1 {
+    background: linear-gradient(
+      90deg,
+      rgba(9, 109, 217, 0.12) 0%,
+      rgba(9, 109, 217, 0) 70%
+    );
+    padding: 0.15rem 0.35rem 0.35rem;
+    border-radius: 6px;
+  }
+
+  h2 {
+    background: linear-gradient(
+      90deg,
+      rgba(14, 165, 233, 0.12) 0%,
+      rgba(14, 165, 233, 0) 70%
+    );
+    padding: 0.15rem 0.35rem 0.25rem;
+    border-left: 4px solid rgba(14, 165, 233, 0.35);
+    border-radius: 6px;
+  }
+
+  h3 {
+    background: linear-gradient(
+      90deg,
+      rgba(37, 99, 235, 0.1) 0%,
+      rgba(37, 99, 235, 0) 70%
+    );
+    padding: 0.1rem 0.3rem 0.2rem;
+    border-left: 3px solid rgba(37, 99, 235, 0.35);
+    border-radius: 6px;
+  }
+
+  /* 表格：表头底色 + 斑马纹提高区分 */
+  table thead {
+    background: rgba(9, 109, 217, 0.06);
+  }
+  table tbody tr:nth-child(even) {
+    background: rgba(9, 109, 217, 0.03);
+  }
+
+  /* 引用块：更明显的蓝色侧边条 */
+  blockquote {
+    background-color: rgba(9, 109, 217, 0.05);
+    border-left: 5px solid rgba(9, 109, 217, 0.4);
+  }
+
+  /* 各类提示块更丰富的分色 */
+  .custom-container.tip {
+    background: rgba(16, 185, 129, 0.08);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+  }
+  .custom-container.info {
+    background: rgba(14, 165, 233, 0.08);
+    border: 1px solid rgba(14, 165, 233, 0.25);
+  }
+  .custom-container.note {
+    background: rgba(99, 102, 241, 0.08);
+    border: 1px solid rgba(99, 102, 241, 0.25);
+  }
+  .custom-container.warning {
+    background: rgba(234, 179, 8, 0.1);
+    border: 1px solid rgba(234, 179, 8, 0.35);
+  }
+  .custom-container.danger {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.35);
+  }
+}

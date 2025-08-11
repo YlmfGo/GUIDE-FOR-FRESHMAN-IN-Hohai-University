@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://avoider-leego.top/sitemap.xml
+

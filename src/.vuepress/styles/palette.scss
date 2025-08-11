@@ -1,1 +1,28 @@
 // you can change colors here
+
+// 品牌色
+$c-brand: #096dd9;
+$c-brand-light: #1890ff;
+
+// 文本颜色（提高对比度以优化浅色模式阅读）
+$c-text: #1f2937; // slate-800
+$c-text-light: #334155; // slate-700
+$c-text-lighter: #475569; // slate-600
+
+// 浅色模式背景（柔和蓝灰，层次更分明）
+$c-bg: #eef2f9; // 站点背景（带轻微蓝灰）
+$c-bg-light: #f3f6fc; // 浅背景层
+$c-bg-lighter: #fbfdff; // 内容卡片/表面（微蓝白）
+
+// 边框颜色（发丝线风格）
+$c-border: #e5e7eb; // slate-200
+$c-border-dark: #d1d5db; // slate-300
+
+// 代码块背景（轻蓝灰，提升可读性）
+$c-code-bg: #eff4ff;
+
+// 提示块颜色
+$c-tip: #42b983;
+$c-warning: #e7c000;
+$c-danger: #cc0000;
+$c-details: #4abf8a;

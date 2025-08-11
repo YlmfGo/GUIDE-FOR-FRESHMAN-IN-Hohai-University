@@ -1,2 +1,13 @@
 // you can change config here
 $theme-color: #096dd9;
+
+// 浅色模式基础变量（提升对比度与清晰度）
+$text-color: #1f2937; // 与 $c-text 保持一致
+$bg-color: #eef2f9;
+$border-color: #e5e7eb;
+
+// 深色模式颜色 - 保持不变
+$dark-bg-color: #1a1a1a;
+$dark-bg-color-light: #252525;
+$dark-text-color: #f0f0f0;
+$dark-border-color: #444;

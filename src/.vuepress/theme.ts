@@ -4,16 +4,20 @@ import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
 export default hopeTheme({
-  hostname: "https://vuepress-theme-hope-docs-demo.netlify.app",
+  hostname: "https://avoider-leego.top",
 
   author: {
     name: "河海大学不完全入学指北编辑部",
   },
 
-  logo: "https://theme-hope-assets.vuejs.press/logo.svg",
+  logo: "/logo.png",
+  logoDark: "/logo.png",
 
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
-
+  // 恢复 repo 配置
+  repo: "Avoidman2233/GUIDE-FOR-FRESHMAN-IN-Hohai-University",
+  repoLabel: "GitHub",
+  docsRepo: "Avoidman2233/GUIDE-FOR-FRESHMAN-IN-Hohai-University",
+  docsBranch: "main",
   docsDir: "src",
 
   // 导航栏
@@ -24,9 +28,11 @@ export default hopeTheme({
 
   // 页脚
   displayFooter: true,
-  footer: "",
+  footer:
+    '<div style="width:300px;margin:0 auto;text-align:left;white-space: nowrap;"><a href="https://beian.miit.gov.cn/" target="_blank" style="text-decoration:none;" rel="noopener"><span style="color:#939393;font-size:12px;vertical-align:middle;">苏ICP备2025175705号</span></a></div>',
   copyright:
     "GPL Licensed | Copyright © 河海大学不完全入学指北编辑部 2024 all right reserved",
+
   // 加密配置
   encrypt: {
     config: {
@@ -37,10 +43,19 @@ export default hopeTheme({
     },
   },
 
-  // 多语言配置
+  // 恢复编辑链接
+  editLink: true,
+
+  // 使用 metaLocales 配置多语言下的编辑链接文字
   metaLocales: {
     editLink: "在 GitHub 上编辑此页",
   },
+
+  // 禁用贡献者列表
+  contributors: false,
+
+  // 保留最后更新时间
+  lastUpdated: true,
 
   // 如果想要实时查看任何改变，启用它。注: 这对更新性能有很大负面影响
   hotReload: true,
@@ -54,10 +69,11 @@ export default hopeTheme({
     demo: true,
     figure: true,
     gfm: true,
-    imgLazyload: true,8 
+    imgLazyload: true,
     imgSize: true,
     include: true,
     mark: true,
+    flowchart: true,
     plantuml: true,
     spoiler: true,
     stylize: [
@@ -116,23 +132,34 @@ export default hopeTheme({
 
   // 在这里配置主题提供的插件
   plugins: {
-    // 注意: 仅用于测试! 你必须自行生成并在生产环境中使用自己的评论服务
-    comment: {
-      provider: "Giscus",
-      repo: "vuepress-theme-hope/giscus-discussions",
-      repoId: "R_kgDOG_Pt2A",
-      category: "Announcements",
-      categoryId: "DIC_kwDOG_Pt2M4COD69",
-    },
+    // 禁用评论功能
+    comment: false,
 
     components: {
       components: ["Badge", "VPCard"],
     },
+    // 通过主题内置方式启用 sitemap 与 git，hostname 已在上方 theme 配置中提供
+    sitemap: true,
+    git: true,
 
     icon: {
-      prefix: "fa6-solid:",
+      prefix: "fluent-emoji:",
     },
 
+    copyright: {
+      // 禁用复制
+      disableCopy: true,
+
+      // 禁用选择
+      disableSelection: true,
+    },
+
+    watermark: {
+      watermarkOptions: {
+        content: "河海大学入学指北编辑部",
+        globalAlpha: 0.05,
+      },
+    },
     // 如果你需要 PWA。安装 @vuepress/plugin-pwa 并取消下方注释
     // pwa: {
     //   favicon: "/favicon.ico",
