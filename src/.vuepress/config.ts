@@ -11,6 +11,8 @@ export default defineUserConfig({
 
   theme,
 
+  // 统计脚本改为在客户端按域名动态注入，避免本地/非生产域名统计异常
+
   // 插件交由主题配置启用，避免与主题内置插件冲突
 
   // 和 PWA 一起启用

@@ -29,7 +29,17 @@ export default hopeTheme({
   // 页脚
   displayFooter: true,
   footer:
-    '<div style="width:300px;margin:0 auto;text-align:left;white-space: nowrap;"><a href="https://beian.miit.gov.cn/" target="_blank" style="text-decoration:none;" rel="noopener"><span style="color:#939393;font-size:12px;vertical-align:middle;">苏ICP备2025175705号</span></a></div>',
+    '<div style="width:100%;max-width:720px;margin:0 auto;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">' +
+    '<a href="https://beian.miit.gov.cn/" target="_blank" style="text-decoration:none;" rel="noopener">' +
+    '<span style="color:#939393;font-size:12px;vertical-align:middle;">苏ICP备2025175705号</span>' +
+    "</a>" +
+    '<span id="busuanzi_container_site_pv" style="display:none;margin-left:12px;color:#939393;font-size:12px;">总访问量 ' +
+    '<span id="busuanzi_value_site_pv"></span>' +
+    "</span>" +
+    '<span id="busuanzi_container_site_uv" style="display:none;margin-left:12px;color:#939393;font-size:12px;">总访客数 ' +
+    '<span id="busuanzi_value_site_uv"></span>' +
+    "</span>" +
+    "</div>",
   copyright:
     "GPL Licensed | Copyright © 河海大学不完全入学指北编辑部 2024 all right reserved",
 
