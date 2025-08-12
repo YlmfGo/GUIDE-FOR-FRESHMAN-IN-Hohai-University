@@ -157,7 +157,8 @@ export default hopeTheme({
     watermark: {
       watermarkOptions: {
         content: "河海大学入学指北编辑部",
-        globalAlpha: 0.05,
+        movable: true,
+        globalAlpha: 0.08,
       },
     },
     // 如果你需要 PWA。安装 @vuepress/plugin-pwa 并取消下方注释
